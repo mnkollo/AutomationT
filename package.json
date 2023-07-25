@@ -1,0 +1,14 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Cypress Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Nkollo",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.14.0"
+  }
+}
