@@ -4,11 +4,18 @@
   "description": "Cypress Automation Framework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:allure": "npx cypress run --env allure=true",
+    "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
+    "report": "npx allure generate allure-results --clean -o allure-report"
   },
   "author": "Michael Nkollo",
   "license": "ISC",
   "dependencies": {
     "cypress": "^12.14.0"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.0"
   }
 }
