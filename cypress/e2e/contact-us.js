@@ -17,4 +17,9 @@ describe('Test Contact Us form via WebdriverUni', () => {
         //cypress code
         contactUsPage.unsuccessSubmission();
     });
+
+    it('Locators', () => {
+        //ID
+        cy.get('#contact-us').click();
+    });
 })
