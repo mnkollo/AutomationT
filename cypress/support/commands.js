@@ -25,6 +25,10 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
-Cypress.Commands.add('OpenBrowser',() => {
-    cy.visit('http://www.webdriveruniversity.com/Contact-Us/contactus.html')
+Cypress.Commands.add('openAutomationStore',() => {
+    cy.visit('http://www.automationteststore.com/')
+});
+
+Cypress.Commands.add('openwebDriverUni',() => {
+    cy.visit('http://www.webdriveruniversity.com/')
 });
