@@ -35,4 +35,18 @@ describe('Handle js alerts', () => {
         })                                                    //window:confirm is a cypress event to be able to click ok or cancel
         cy.get('[id="confirm-alert-text"]').contains('You pressed Cancel!')
     });
+    it('Validate js confrm alert box using a stub', () => {
+                                                                    //stub is a fake function that can be used to control the behavior of a function
+        
+        const stub = cy.stub()                                 //create a stub
+        cy.on('window:confirm', stub)                          //pass the stub to the window:confirm event
+
+        cy.get('[id="button4"]').click().then(() => {
+            expect(stub.getCall(0)).to.be.calledWith('Press a button!')  //verify the stub was called with the correct text
+        }).then(() => {
+            return true;                                        //return true to click ok
+        }).then(() => {
+            cy.get('[id="confirm-alert-text"]').contains('You pressed OK!')
+        })
+    });
 })
