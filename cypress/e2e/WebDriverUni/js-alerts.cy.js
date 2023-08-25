@@ -17,7 +17,7 @@ describe('Handle js alerts', () => {
             expect(str).to.equal('I am an alert box!')        //window:alert is a cypress event to auto accept alerts
         })
     });
-    it.only('Validate js confrm alert box works correctly when clicking ok', () => {
+    it('Validate js confrm alert box works correctly when clicking ok', () => {
         //cypress code
         cy.get('[id="button4"]').click();
         
@@ -26,7 +26,7 @@ describe('Handle js alerts', () => {
         })
         cy.get('[id="confirm-alert-text"]').contains('You pressed OK!')
     });
-    it.only('Validate js confrm alert box works correctly when clicking cancel', () => {
+    it('Validate js confrm alert box works correctly when clicking cancel', () => {
         //cypress code
         cy.get('[id="button4"]').click();
         
