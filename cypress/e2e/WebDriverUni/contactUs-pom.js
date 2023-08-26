@@ -1,6 +1,6 @@
 /// <reference types='cypress' />
 
-import { contactUsPage } from "../pages/contactUsPage";
+import { contactUsPage } from '../../pages/contactUsPage';
 
 
 describe('Test Contact Us form via WebdriverUni', () => {

@@ -20,8 +20,8 @@ describe("Verify Autocomplete dropwdown lists via webdriveruni", () => {
         }).then(() => {
             cy.get('#myInput').type('G')
 
-            cy.get('#myInputautocomplete-list > *').each(($el, index, $list) => {
-                const prod = $el.text();                  //jQuery method to get text from element
+            cy.get('#myInputautocomplete-list > *').each(($el, index, $list) => {   //$list is the list of elements
+                const prod = $el.text();                                            //jQuery method to get text from element
                 const productToSelect = 'Grapes';
 
                 if (prod === productToSelect) {

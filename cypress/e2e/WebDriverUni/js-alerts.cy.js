@@ -36,9 +36,8 @@ describe('Handle js alerts', () => {
         cy.get('[id="confirm-alert-text"]').contains('You pressed Cancel!')
     });
     it('Validate js confrm alert box using a stub', () => {
-                                                                    //stub is a fake function that can be used to control the behavior of a function
-        
-        const stub = cy.stub()                                 //create a stub
+                                                                //stub is a fake function that can be used to control the behavior of a function
+        const stub = cy.stub()                                 //create a stub - stub will store the text of the alert 
         cy.on('window:confirm', stub)                          //pass the stub to the window:confirm event
 
         cy.get('[id="button4"]').click().then(() => {
