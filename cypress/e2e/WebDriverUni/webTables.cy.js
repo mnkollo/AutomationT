@@ -37,7 +37,7 @@ describe("Interact with WebTables", () => {
         })
 
     });
-    it.only ('Calculate and assert the age of a given user based on last name', () => {
+    it('Calculate and assert the age of a given user based on last name', () => {
         cy.get('#thumbnail-1 tr td:nth-child(2)').each(($el, index, $list) => {                                                              //get the table and iterate through each cell
             const text = $el.text();                                                                                                         //store the cell text in a variable
             if(text.includes('Woods')) {                                                                                                     //if the cell text contains the last name
