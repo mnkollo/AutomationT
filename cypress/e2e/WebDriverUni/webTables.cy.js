@@ -12,8 +12,8 @@ describe("Interact with WebTables", () => {
         cy.get('[id="t01"] tr').first().each(($row, $rowindex) => {     // Assuming the table has rows and columns, verify the data in the first row
             cy.wrap($row).find('th').each(($cell, i) => {
                 cy.wrap($cell).invoke('text').then((text) => { 
-                    cy.log(expectedTableData[i])         // Get the cell text
-                    //cy.wrap(text).should('equal', expectedTableData[i]);   //compare the cell text with the expected data
+                    //cy.log(expectedTableData[i])         // Get the cell text
+                    cy.wrap(text).should('equal', expectedTableData[i]);   //compare the cell text with the expected data
                 })
             })
         })
@@ -23,12 +23,12 @@ describe("Interact with WebTables", () => {
         let numb = 0;
         cy.get('#thumbnail-1 td').each(($el, index, $list) => {             //get the table and iterate through each cell
             userDetails[index] = $el.text();                                //store the cell text in an array
-
+                cy.log(userDetails[index])                                  //log the cell text
         }).then(() => {
             var i;
-            for(i = 0; i < userDetails.length; i++) {                      
-                if(Number(userDetails[i]))      {                          //iterate through the array and calculate the total age
-                    numb += Number(userDetails[i])                         //only count cells with numbers
+            for(i = 0; i < userDetails.length; i++) {                      // .length returns the number of elements in the array             
+                if(Number(userDetails[i]))      {                          // iterate through the array and calculate the total age
+                    numb += Number(userDetails[i])                         // only count cells with numbers
                 }                            
                 //cy.log(userDetails[i])
             }  
