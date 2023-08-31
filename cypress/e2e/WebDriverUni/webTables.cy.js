@@ -48,4 +48,19 @@ describe("Interact with WebTables", () => {
             }
         })
     })
+    it.only('Verify First Row and skip last cell', () => {
+        const expectedTableData = ['John', 'Smith'];     // Define your expected data in an array list
+        const cellsToSkip = [2];                                // Define the cells to skip in an array list
+        cy.get('[id="t01"] tr').eq(1).then(($row,i) => {
+            cy.wrap($row).find('td').each(($cell, cellIndex) => {
+
+                if(cellsToSkip.includes(cellIndex)) {      //if the cell index is in the array list, skip it
+                    return;                  //return to the next iteration
+                 }                
+                cy.wrap($cell).invoke('text').then((text) => { 
+                    cy.wrap(text).should('equal', expectedTableData[i]);   //compare the cell text with the expected data
+                })
+            })
+        })
+    })
 });
