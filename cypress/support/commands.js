@@ -26,7 +26,7 @@
 
 
 Cypress.Commands.add('openAutomationStore',() => {
-    cy.visit('http://www.automationteststore.com/')
+    cy.visit('https://automationteststore.com')
 });
 
 Cypress.Commands.add('openwebDriverUni',() => {
