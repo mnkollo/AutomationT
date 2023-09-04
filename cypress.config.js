@@ -9,5 +9,7 @@ module.exports = defineConfig({
             return config;
     },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
+    chromeWebSecurity: false,    // to disable the same origin policy
+    experimentalSessionAndOrigin: true, // to disable the same origin policy
   },
 });

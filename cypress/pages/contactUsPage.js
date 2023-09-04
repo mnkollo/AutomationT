@@ -1,6 +1,7 @@
 /// <reference types="Cypress" />
 
 export class ContactUsPage {
+    
     successSubmission() {
         cy.get('h2').should('have.text', 'CONTACT US');
         cy.get('[name="first_name"]').type('Joe');
