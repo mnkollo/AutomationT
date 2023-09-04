@@ -48,7 +48,7 @@ describe("Interact with WebTables", () => {
             }
         })
     })
-    it.only('Verify First Row and skip last cell', () => {
+    it.skip('Verify First Row and skip last cell', () => {
         const expectedTableData = ['John', 'Smith'];     // Define your expected data in an array list
         const cellsToSkip = [2];                                // Define the cells to skip in an array list
         cy.get('[id="t01"] tr').eq(1).then(($row,i) => {
