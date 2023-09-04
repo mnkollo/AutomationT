@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open",
+    "triggeringAllTest-headed": "npx cypress run --headed",
+    "triggeringAllTest-headless": "npx cypress run",
+    "triggeringAllTest-chrome": "npx cypress run --browser chrome",
+    "triggeringAllTest-webdriverUni": "npx cypress run --spec cypress/e2e/WebDriverUni/*",
     "cy:allure": "npx cypress run --env allure=true",
     "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
     "report": "npx allure generate allure-results --clean -o allure-report"
