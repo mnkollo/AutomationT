@@ -9,8 +9,8 @@ describe('Inspect Automation Test Store items using chain of commands', () => {
 
     });
     it('Click on the first item using item header', () => {
-        cy.get('.prdocutname').contains('Skinsheen Bronzer Stick').click().then(function (itemHeaderText) {
-            console.log('Selected the following item: ' + itemHeaderText.text())
+        cy.get('.prdocutname').contains('Skinsheen Bronzer Stick').click().then(function (itemHeaderText) {   //chaining commands
+            cy.log('Selected the following item: ' + itemHeaderText.text())
         })
     })
     it('Click On the First Item using index', () => {

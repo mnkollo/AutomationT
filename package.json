@@ -10,6 +10,7 @@
     "triggeringAllTest-headless": "npx cypress run",
     "triggeringAllTest-chrome": "npx cypress run --browser chrome",
     "triggeringAllTest-webdriverUni": "npx cypress run --spec cypress/e2e/WebDriverUni/*",
+    "triggerAllTests-autostore-dashboard": "npx cypress run --spec cypress/e2e/Automation-Test-Store/* --record --key ced2261f-5cae-4342-bf2d-ce7baa79fdec",
     "cy:allure": "npx cypress run --env allure=true",
     "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
     "report": "npx allure generate allure-results --clean -o allure-report"
