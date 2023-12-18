@@ -12,10 +12,8 @@
   },
   "author": "Michael Nkollo",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "^12.14.0"
-  },
   "devDependencies": {
-    "@shelex/cypress-allure-plugin": "^2.40.0"
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "cypress": "^13.5.0"
   }
 }

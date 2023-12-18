@@ -2,6 +2,7 @@
 
 describe("Verify Autocomplete dropwdown lists via webdriveruni", () => {
     it("Select specific product via autocomplete list", () => {
+        
         cy.openwebDriverUni();
         cy.get('#autocomplete-textfield').invoke('removeAttr', 'target').click({ force: true })
 
